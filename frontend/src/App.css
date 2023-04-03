@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Shantell+Sans:wght@300&display=swap');
+*{
+  scroll-behavior: smooth;
+}
+
+.app{
+  min-height: 100vh;
+  background-color: #39445a;
+  /* background-color: #fff; */
+  color: white;
+  /* color: black; */
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /* position: fixed; */
+}
+@media (max-width:400px) {
+  .app{
+      padding-top: 40px;
+  }
+}
+
+.app2{
+ position:relative;
+ background-color: rgb(19, 18, 23);
+ border-radius: 10px;
+}
+.pagetitle{
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'Merriweather',sans-serif;
+  font-size: 5vh;
+  border-radius: 50px;
+  padding: white;
+}
+@media(min-width:1000px){
+  .pagetitle{
+    font-size: 7vh;
+    margin-bottom: 5px
+  }
+}
+@media(max-width:600px){
+  .pagetitle{
+    margin-top: 5px;
+    
+  }
+}
