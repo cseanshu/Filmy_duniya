@@ -40,7 +40,7 @@ app.get('/logo.svg',(req,res)=>{
     console.log(req.body.razorpay_order_id);
 
    const  payment_capture=1;
-    const amount=499;
+    const amount=498;
     const currency='INR'
     const options={
         amount:(amount*100).toString(),
