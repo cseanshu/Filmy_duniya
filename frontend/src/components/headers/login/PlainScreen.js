@@ -63,7 +63,7 @@ async function displayRazorPay2(){
   console.log(data)
   const options = {
     "key": 'rzp_test_AhMoTIp09GbOPh', 
-    // "amount": data.amount.toString(),
+    "amount": data.amount.toString(),
     "amount": 200,
     "currency": data.currency,
     "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
