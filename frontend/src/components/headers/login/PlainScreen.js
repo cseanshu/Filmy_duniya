@@ -28,7 +28,7 @@ function PlainScreen() {
       "currency": data.currency,
       "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       "name": "Anshuman mishra", 
-      "description": "Test Transaction",
+      "description": "Test Transaction done",
       "image": "https://myworld12.onrender.com/logo.svg",
       // "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
       handler: function (response) {
@@ -38,12 +38,12 @@ function PlainScreen() {
 			},
       
       "prefill": {
-          "name": "mishra", //your customer's name
-          "email": "gaurav.kumar@example.com",
-          "contact": "9000090000"
+          "name": " Anshuman mishra", //your customer's name
+          "email": "mishraanshuman1008@gmail.com",
+          "contact": "639220***1"
       },
       "notes": {
-          "address": "Razorpay Corporate Office"
+          "address": "493 Purwara pratapgarh uttarpradesh"
       },
       "theme": {
           "color": "#3399cc"
@@ -52,8 +52,46 @@ function PlainScreen() {
   const paymentObject = new window.Razorpay(options); 
   paymentObject.open();
 }
-
-
+//   for platinum plans this function 
+async function displayRazorPay2(){
+  const res=await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+  if(!res){
+    alert('RazorPay SDK failed to load; are you online? ')
+    return
+  }
+  const data= await fetch('https://myworld12.onrender.com/razorpay',{method:'POST'}).then((t)=>t.json())
+  console.log(data)
+  const options = {
+    "key": 'rzp_test_AhMoTIp09GbOPh', 
+    // "amount": data.amount.toString(),
+    "amount": 200,
+    "currency": data.currency,
+    "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "name": "Anshuman mishra", 
+    "description": "Test Transaction done",
+    "image": "https://myworld12.onrender.com/logo.svg",
+    // "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+    handler: function (response) {
+      alert(response.razorpay_payment_id)
+      alert(response.razorpay_order_id)
+      alert(response.razorpay_signature)
+    },
+    
+    "prefill": {
+        "name": " Anshuman mishra", //your customer's name
+        "email": "mishraanshuman1008@gmail.com",
+        "contact": "639220***1"
+    },
+    "notes": {
+        "address": "493 Purwara pratapgarh uttarpradesh"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+const paymentObject = new window.Razorpay(options); 
+paymentObject.open();
+}
 
 
 // const checkoutHandler = async () => {
@@ -104,7 +142,7 @@ function PlainScreen() {
      </div>
      <div className='plans'>
       <div className='plans_name'>Platinum<br/> 720p</div>
-      <div  ><button className='plans_button'>Subscribe</button></div>
+      <div  ><button className='plans_button' onClick={displayRazorPay2}>Subscribe</button></div>
      </div>
      <div className='plans'>
       <div className='plans_name'>Basic<br/>480p</div>
