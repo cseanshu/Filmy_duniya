@@ -40,8 +40,13 @@
   }
 }
 @media(max-width:600px){
-  .pagetitle{
+  /* .pagetitle{
     margin-top: 5px;
     
+  } */
+}
+@media (min-width:100px) and (max-width:400px){
+  .pagetitle{
+    margin-top: 20px;
   }
 }
