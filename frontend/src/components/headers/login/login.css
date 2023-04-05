@@ -16,6 +16,8 @@
 
 }
 .loginscreen_body{
+  margin-top: 8px;
+  /* background-color: aqua; */
   position: absolute;
   top: 18%;
   left: 0;
@@ -23,8 +25,14 @@
   text-align: center;
   z-index: 1;
   color: #fff;
-  padding: 20px;
+  /* padding: 20px; */
 
+}
+@media (max-width:600px){
+  .loginscreen_body{
+    /* background-color: #620b0b; */
+    /* top: 0; */
+  }
 }
 .loginscreen_body>h1{
   font-size: 2.65rem;
@@ -32,7 +40,7 @@
 .loginscreen_body>h2{
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .loginscreen_body>h3{
   font-size: 1.3rem;
@@ -46,7 +54,7 @@ logo{
   float: right;
     background-color: #620b0b;
     color: white;
-    padding: 10px 12px 10px 18px;
+    padding: 5px 8px 8px 8px;
     font-size: larger;
     font-family: Shantell Sans;
     border: aqua;
@@ -58,10 +66,10 @@ logo{
   .heading_name{
     cursor: pointer;
     color: white;
-    font-size: 8vh;
+    font-size: 5vh;
     margin: 2px;
     font-family: Shantell Sans;
-    background-color: #6c5d1047;
+    /* background-color: #6c5d1047; */
     border-radius: 12px;
   }
 .loginscreen_input>form>input{
@@ -73,22 +81,32 @@ border:none;
 max-width: 600px;
 border-radius: 2px;
 }
+@media (max-width:500px) {
+  .credit{
+    position: absolute;
+  bottom: 0;
+  /* right:40%; */
+  text-align: center;
+  }
+}
 .loginscreen_getstarted{
-  padding:12px 16px;
+  padding:13px;
   font-size: 1rem;
   background-color: #620b0b;
   border: none;
  color: #fff;
  font-weight: 400;
  cursor: pointer;
- border-radius: 2px;
+ border-radius: 5px;
 }
 .credit{
-  background-color:black;
+  /* float: inline-end; */
+  position: absolute;
+  bottom: 0;
+ right: 3%;
   color: white;
-  text-align: center;
-  /* text-decoration: underline; */
-  font-size: 400;
+  font-size: large;
+  font-weight: 900;
   font-family: 'Courier New', Courier, monospace;
 
 }

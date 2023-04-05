@@ -6,6 +6,7 @@ import SignupScreen from './SignupScreen'
 export const Login = () => {
   const [signin, setsignin] = useState(false)
   return (
+  <>
     <div className='login'>
   <div className='login_gradient'>
     <div className='login_container'>
@@ -15,10 +16,9 @@ export const Login = () => {
     <div className='loginscreen_body'>
      {signin?<SignupScreen/>:
      <>
-        <h1>Unlimited flims TV programs,and
-        more.</h1>
+        <h1>Unlimited flims TV programs.</h1>
         <h2> Go Unlimited, watch anywhere</h2>
-        <h3>ready to watch? Enter your email address to watch or restart
+        <h3>ready to watch? Enter your email address to watch or<br/> restart
          your membership</h3>
          <div className='loginscreen_input'>
           <form>
@@ -31,8 +31,10 @@ export const Login = () => {
       </>
      }
     </div>
-    </div>
-<div className='credit'>made with💖mishra_</div>
+             </div>
+         <div className='credit'>made with💖mishra_</div> 
   </div>
+         </>
+        
   )
 }

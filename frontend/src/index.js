@@ -12,11 +12,11 @@ root.render(
   <BrowserRouter>
   
      <Provider store={store}>
-    <App />,
-      </Provider>,
-  </BrowserRouter>,
-  {/* </React.StrictMode> */}
-  );
+    <App />
+      </Provider>
+  </BrowserRouter>
+  // {/* </React.StrictMode> */}
+  )
   
   // If you want to start measuring performance in your app, pass a function
   // to log results (for example: reportWebVitals(console.log))
