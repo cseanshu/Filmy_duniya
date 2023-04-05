@@ -20,7 +20,7 @@ function PlainScreen() {
       alert('RazorPay SDK failed to load; are you online? ')
       return
     }
-    const data= await fetch('http://localhost:1337/razorpay',{method:'POST'}).then((t)=>t.json())
+    const data= await fetch('https://myworld12.onrender.com/razorpay',{method:'POST'}).then((t)=>t.json())
     console.log(data)
     const options = {
       "key": 'rzp_test_AhMoTIp09GbOPh', 
@@ -29,7 +29,7 @@ function PlainScreen() {
       "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       "name": "Anshuman mishra", 
       "description": "Test Transaction",
-      "image": "http://localhost:1337/logo.svg",
+      "image": "https://myworld12.onrender.com/logo.svg",
       // "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
       handler: function (response) {
 				alert(response.razorpay_payment_id)
